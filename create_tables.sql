@@ -1,4 +1,3 @@
--- Створення таблиці студентів
 CREATE TABLE students (
     student_id INTEGER PRIMARY KEY,
     first_name TEXT NOT NULL,
@@ -7,20 +6,17 @@ CREATE TABLE students (
     FOREIGN KEY (group_id) REFERENCES groups(group_id)
 );
 
--- Створення таблиці груп
 CREATE TABLE groups (
     group_id INTEGER PRIMARY KEY,
     group_name TEXT NOT NULL
 );
 
--- Створення таблиці викладачів
 CREATE TABLE teachers (
     teacher_id INTEGER PRIMARY KEY,
     first_name TEXT NOT NULL,
     last_name TEXT NOT NULL
 );
 
--- Створення таблиці предметів
 CREATE TABLE subjects (
     subject_id INTEGER PRIMARY KEY,
     subject_name TEXT NOT NULL,
@@ -28,7 +24,6 @@ CREATE TABLE subjects (
     FOREIGN KEY (teacher_id) REFERENCES teachers(teacher_id)
 );
 
--- Створення таблиці оцінок
 CREATE TABLE grades (
     grade_id INTEGER PRIMARY KEY,
     student_id INTEGER,
